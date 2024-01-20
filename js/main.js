@@ -100,7 +100,7 @@ window.onmousemove = e =>{
   
   for(const image of track.getElementsByClassName("image")){
     image.animate({
-      objectPosition: `${nextPercentage + 100}% center`},{duration: 50000, fill:"forwards"});
+      objectPosition: `${nextPercentage + 100}% center`},{duration: 5000, fill:"forwards"});
     }
 }
 });

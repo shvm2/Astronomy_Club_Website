@@ -19,9 +19,9 @@ body{
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    background: url(../images/img1.gif) no-repeat top center;
+    background: url(../images/black-bg.jpg) no-repeat top center;
     background-size: cover;
-    background-attachment: fixed; /* Add this line */
+    background-attachment: fixed; /*Add this line*/
 }
 
 .heading, .clients .section-header h2, .section-head h1, .testimonials .section-header h2, .section-head-1 h4{
@@ -39,8 +39,8 @@ body{
     position: absolute;
     height: 2.5rem;
     width: 2.5rem;
-    border-top: .4rem solid #002e5f;
-    border-left: .4rem solid #002e5f;
+    border-top: .4rem solid #0256b0;
+    border-left: .4rem solid #002776;
 }
 
 .faq .heading::before, .faq .heading::after{
@@ -65,12 +65,12 @@ body{
     border-radius: 5rem;
     background: white;
     border-style: groove;
-    border-color: #002e5f;
+    border-color: #ff7700;
     font-size: 1.5rem;
     cursor: pointer;
     height: 3.5rem;
     width: 15rem;
-    box-shadow: 0 .2rem .5rem rgba(0,0,0,.3);
+    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.3);
 }
 
 .communicate .btn{
@@ -106,17 +106,20 @@ body{
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
     position: fixed;
+    height: 50px;
+    opacity: 0.8;
+    background-color: #00002e !important;
 }
 
 .header .logo img{
-    width: 130%;
-    height: 3rem;
+    width: 100%;
+    height: 5rem;
     top: 0;
     left: 0;
 }
@@ -129,7 +132,8 @@ body{
 }
 
 .header .navbar ul li{
-    margin: 0 1.5rem;
+    margin: 0.5rem 1rem;
+    padding-top: 2px;
 }
 
 .header .navbar ul li a{
@@ -138,8 +142,11 @@ body{
 }
 
 .header .navbar ul li a:hover{
-    color: #00bfff;
-    text-decoration: underline;
+    color: #ff8000;
+    text-decoration: none;
+    background-color: #001e41;
+    padding: 4px 9px;
+    border-radius: 15px;
 }
 
 .header .logo i{
@@ -156,7 +163,7 @@ body{
 .home {
     min-height: 100vh;
     width: 100%;
-    background: url(../images/img1234.jpg)  no-repeat top center;
+    background: url(../images/lava_land.jpg)  no-repeat top center;
     background-attachment: fixed;
     background-size: cover !important;
     -webkit-background-size: cover !important;
@@ -165,19 +172,21 @@ body{
     justify-content: center;
     flex-flow: column;
     text-align: center;
-    padding: 0 1rem;
+    padding: 0 2rem;
     position: relative;
     overflow: hidden !important;
 }
 
 .home h1{
     color: #fff;
-    font-size: 6.5rem;
+    font-size: 9rem;
+    padding-top: 10%;
+    text-shadow: 2px 2px 4px #333333;
 }
 
 .home h2{
     color: #fff;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
 }
 
 .about{
@@ -204,7 +213,7 @@ body{
 
 .about .row .content h3{
     font-size: 3rem;
-    color: rgb(179, 160, 244);
+    color: rgb(63, 119, 198);
 }
 
 .about .row .content p{
@@ -214,7 +223,7 @@ body{
 }
 .pt-5 .container .row .section-head p{
     font-size: 2rem;
-    color: #333;
+    color: #ffffff;
     padding: 1rem 0;
 }
   .section-head{
@@ -354,7 +363,7 @@ body{
     text-align: center;
   }
   .item{
-    background:#fff;
+    background:#001e40;
     text-align: center;
     padding:30px 25px;
     box-shadow: 0 0 25px rgba(0,0,0,0.07);
@@ -363,10 +372,10 @@ body{
     border: 1px solid rgba(0,0,0,0.07);
     -webkit-transition:all 0.7s ease 0s;
     transition:all 0.7 ease 0s;
-    
+    color: white;
   }
   .item:hover{
-    background-image: linear-gradient(to bottom right, #66ffcc 0%, #ffccff 100%);
+    background-image: linear-gradient(to bottom right, #001d43de 0%, #933c06 100%);
     background-position: right;
     transition: background-position 3s;
     box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
@@ -382,7 +391,7 @@ body{
   }
   .item:hover h6,
   .item:hover p{
-    color:#2b6777;
+    color:#ffffff;
     -webkit-transition:all 0.5s ease 0s;
     transition:all 0.5s ease 0s;
   }
@@ -429,7 +438,7 @@ body{
   .item h6{
     margin-bottom: 20px;
     font-family: "Varela Round",Arial,"Helvetica Neue",Helvetica,sans-serif;
-    color:#2f2f2f;
+    color:#ffffff;
   }
 
 .communicate{
@@ -523,36 +532,50 @@ body{
 
 .clients {
     position: relative;
-    padding: 90px;
+    padding: 90px 0;
     text-align: center;
     margin-top: -10rem;
     margin-bottom: -10rem;
 }
 
 .clients .section-header p {
-    padding-bottom: 15px;
-    margin-top: 55rem;
+    padding-bottom: 10px;
+    margin-top: 2.5rem;
     text-align: center;
-    font-size: 3rem;
-    color: #ffffff;
-    padding: 15rem 0;
+    font-size: 2rem;
+    color: #333;
+    padding: 1rem 0;
 }
 
-#image-track > .image{
-    width: 40vmin;
-    height: 56vmin;
-    object-fit: cover;
-    object-position: center;
-  }
-  
-  #image-track{
-    display: flex;
-    gap: 4vmin;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(0%, -50%) ;
-  }
+.clients img {
+    max-width: 100%;
+    opacity: 1;
+    transition: 0.3s;
+    padding: 15px 0;
+}
+
+.clients img:hover {
+    opacity: .5;
+}
+
+.clients .owl-nav,
+.clients .owl-dots {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.clients .owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd;
+}
+
+.clients .owl-dot.active {
+    background-color: #4F84C4;
+}    
 
 .team{
     min-width: 100vw;
@@ -676,6 +699,7 @@ ul {
   .itemss:nth-child(3) {
     --bg-color: #316ff6;
   }
+
 
 .team .row .card::before, .team .row .card::after{
     content: '';

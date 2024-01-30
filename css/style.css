@@ -108,13 +108,13 @@ body{
     letter-spacing: .1rem;
     opacity: .9;
     color: white;
-    background: #00bfff;
+    background: #ff7700;
 }
 
 .header{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content:center;
     width: 100%;
     padding: 1rem 1rem;
     position: fixed;
@@ -123,8 +123,7 @@ body{
     z-index: 100;
     position: fixed;
     height: 50px;
-    opacity: 0.8;
-    background-color: #00002e !important;
+    background-color: rgba(0, 0, 46, 0.6) !important;
 }
 
 .header .logo img{
@@ -323,7 +322,7 @@ body{
   }   
 
 .counters {
-	background-image: url(../images/img2.png);
+	background-image: url(../images/img21.png);
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -454,7 +453,7 @@ body{
 .communicate{
     text-align: center;
     align-items: center;
-    background-image: url(../images/img3.jpg);
+    background-image: url(../images/img3.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -494,25 +493,28 @@ body{
     width: 100%;
     padding: 30px 15px;
     text-align: center;
-    background: #ffffff;
+    background: #00163d;
 }
 
 .testimonials .testimonial-text h3 {
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 10px;
+    color: white;
 }
 
 .testimonials .testimonial-text h4 {
     font-size: 12px;
     font-weight: 300;
     text-transform: uppercase;
+    color: white;
 }
 
 .testimonials .testimonial-text p {
     margin: 0;
     font-size: 16px;
     font-weight: 300;
+    color: white;
 }
 
 .testimonials .owl-nav,
@@ -1133,7 +1135,7 @@ ul {
     }
     .fa-navicon:before, .fa-reorder:before, .fa-bars:before {
         content: "\f0c9";
-        color: orange;
+        color: rgb(255, 255, 255);
     }
     .header .navbar{
         position: fixed;
@@ -1141,9 +1143,9 @@ ul {
         left: 0;
         height: auto;
         width: 100%;
-        background-color: white;
+        background-color: rgb(0, 0, 46);
         z-index: 1000;
-        border-top: .1rem solid rgba(0,0,0,.3);
+        border-top: .1rem solid rgba(0,0,46,.3);
     }
 
     .header .navbar ul{
@@ -1158,7 +1160,7 @@ ul {
     }
 
     .header .navbar ul li a{
-        color: rgb(248, 170, 1);
+        color: rgb(255, 255, 255);
         font-size: 2.4rem;
     }
 

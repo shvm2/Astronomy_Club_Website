@@ -23,6 +23,181 @@ body{
     background-size: cover;
     background-attachment: fixed; /*Add this line*/
 }
+@keyframes spin {
+    from {
+      transform: rotate(0);
+    }
+    to{
+      transform: rotate(359deg);
+    }
+  }
+  
+  @keyframes spin3D {
+    from {
+      transform: rotate3d(.5,.5,.5, 360deg);
+    }
+    to{
+      transform: rotate3d(0deg);
+    }
+  }
+  
+  @keyframes configure-clockwise {
+    0% {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(90deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    75% {
+      transform: rotate(270deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes configure-xclockwise {
+    0% {
+      transform: rotate(45deg);
+    }
+    25% {
+      transform: rotate(-45deg);
+    }
+    50% {
+      transform: rotate(-135deg);
+    }
+    75% {
+      transform: rotate(-225deg);
+    }
+    100% {
+      transform: rotate(-315deg);
+    }
+  }
+  
+  @keyframes pulse {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: .25;
+      transform: scale(.75);
+    }
+  }
+  .wrapper-loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+  }
+  .solar-system {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .orbit {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #fafbfC;
+      border-radius: 50%;
+  } 
+  
+  .earth-orbit {
+      width: 165px;
+      height: 165px;
+    -webkit-animation: spin 12s linear 0s infinite;
+  }
+  
+  .venus-orbit {
+      width: 120px;
+      height: 120px;
+    -webkit-animation: spin 7.4s linear 0s infinite;
+  }
+  
+  .mercury-orbit {
+      width: 90px;
+      height: 90px;
+    -webkit-animation: spin 3s linear 0s infinite;
+  }
+  
+  .planet {
+      position: absolute;
+      top: -5px;
+    width: 10px;
+    height: 10px;
+      border-radius: 50%;
+    background-color: #3ff9dc;
+  }
+  
+  .sun {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-color: #ffab91;
+  }
+  
+  .leo {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+  }
+  
+  .blue-orbit {
+      width: 165px;
+      height: 165px;
+    border: 1px solid #91daffa5;
+    -webkit-animation: spin3D 3s linear .2s infinite;
+  }
+  
+  .green-orbit {
+      width: 120px;
+      height: 120px;
+    border: 1px solid #91ffbfa5;
+    -webkit-animation: spin3D 2s linear 0s infinite;
+  }
+  
+  .red-orbit {
+      width: 90px;
+      height: 90px;
+    border: 1px solid #ffca91a5;
+    -webkit-animation: spin3D 1s linear 0s infinite;
+  }
+  
+  .white-orbit {
+      width: 60px;
+      height: 60px;
+    border: 2px solid #ffffff;
+    -webkit-animation: spin3D 10s linear 0s infinite;
+  }
+  .hidden {
+    display: none;
+}
+  .w1 {
+    transform: rotate3D(1, 1, 1, 90deg);
+  }
+  
+  .w2 {
+    transform: rotate3D(1, 2, .5, 90deg);
+  }
+  
+  .w3 {
+    transform: rotate3D(.5, 1, 2, 90deg);
+  }  
 
 .img-new{
     width: 100%;
@@ -35,13 +210,36 @@ body{
     border-radius: 10px;
 }
 .heading, .clients .section-header h2, .section-head h1, .testimonials .section-header h2, .section-head-1 h4{
-    margin: 2rem;
+    margin: 7rem;
     padding-top: 6rem;
     display: inline-block;
     font-size: 3.5rem;
     color: white;
     position: relative;
     letter-spacing: .2rem;
+}
+.loader {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -20px;
+    margin-top: -20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Hide content initially */
+.hidden {
+    display: none;
 }
 
 .heading::before, .heading::after, .clients .section-header h2::before, .clients .section-header h2::after, .section-head h1::before, .section-head h1::after, .testimonials .section-header h2::before, .testimonials .section-header h2::after, .section-head-1 h4::before, .section-head-1 h4::after{
@@ -734,145 +932,167 @@ ul {
     left: -4rem;
 }
 
-.contact{
+.contact {
     text-align: center;
     align-items: center;
-    min-height: 70vh;
+    min-height: 100vh;
     width: 100vw;
-    text-align: center;
-    padding: 0 2rem;
-    background: url(../images/manipal-map.png);
+    padding-top: 20px;
+    background: url(../images/contact_img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.contact .heading{
-    margin-bottom: 5rem;
-}
-
-.contact-in
-		{
-			width: 30%;
-			height: auto;
-			margin: auto auto 5rem auto;
-			display: flex;
-			flex-wrap: wrap;
-			padding: 10px;
-			border-radius: 10px;
-			background: transparent;
-			box-shadow: 0px 0px 10px 0px #666;
-		}
-
-		.contact-map
-		{
-			width: 100%;
-			height: auto;
-			flex: 50%;
-		}
-		.contact-map iframe
-		{
-			width: 100%;
-			height: 100%;
-		}
-		.contact-form
-		{
-			width: 100%;
-			height: auto;
-			flex: 50%;
-			text-align: left;
-		}
-		.contact-form-txt
-		{
-            margin-left: 2rem;
-			width: 95%;
-			height: 40px;
-			color: #000;
-			border: 1px solid #bcbcbc;
-			border-radius: 50px;
-			outline: none;
-			margin-bottom: 20px;
-			padding: 15px;
-		}
-        .contact-form-email
-		{
-            margin-left: 2rem;
-			width: 95%;
-			height: 40px;
-			color: #000;
-			border: 1px solid #bcbcbc;
-			border-radius: 50px;
-			outline: none;
-			margin-bottom: 20px;
-			padding: 15px;
-		}
-		.contact-form-txt::placeholder
-		{
-			color: #aaa;
-            font-size: 1.5rem;
-		}
-        .contact-form-email::placeholder
-		{
-			color: #aaa;
-            font-size: 1.5rem;
-		}
-		.contact-form-txtarea
-		{
-            margin-left: 2rem;
-			width: 95%;
-			height: 130px;
-			color: #000;
-			border: 1px solid #bcbcbc;
-			border-radius: 10px;
-			outline: none;
-			margin-bottom: 20px;
-			padding: 15px;
-			font-family: 'Poppins', sans-serif;
-		}
-		.contact-form-txtarea::placeholder
-		{
-			color: #aaa;
-            font-size: 1.5rem;
-		}
-
-		.contact-form-btn
-		{
-            margin-left: 2rem;
-            outline: none;
-            border: none;
-            border-radius: 5rem;
-            background: white;
-            border-style: groove;
-            border-color: #002e5f;
-            font-size: 1.5rem;
-            cursor: pointer;
-            height: 3.5rem;
-            width: 15rem;
-            box-shadow: 0 .2rem .5rem rgba(0,0,0,.3);
-		}
-        .contact-form-btn:hover{
-            letter-spacing: .1rem;
-            opacity: .9;
-            color: white;
-            background: #002e5f;
-        }
-		.contact-form-phone
-		{
-            margin-left: 2rem;
-			width: 95%;
-			height: 40px;
-			color: #000;
-			border: 1px solid #bcbcbc;
-			border-radius: 50px;
-			outline: none;
-			margin-bottom: 20px;
-			padding: 15px;
-		}
-		.contact-form-phone::placeholder
-		{
-			color: #aaa;
-            font-size: 1.5rem;
-		}
-
+  }
+  
+  .login-box {
+    margin: 20px auto 5rem auto;
+    width: 400px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.75);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  
+  .login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+  }
+  
+  .login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+  }
+  
+  .login-box a:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 25px #03e9f4,
+      0 0 100px #03e9f4;
+  }
+  
+  .login-box a span {
+    position: absolute;
+    display: block;
+  }
+  
+  .login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 2s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,
+    100% {
+      left: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 2s linear infinite;
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,
+    100% {
+      top: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 2s linear infinite;
+    /* animation-delay: 0.5s; */
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,
+    100% {
+      right: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 2s linear infinite;
+    animation-delay: 0.50s;
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,
+    100% {
+      bottom: 100%;
+    }
+  }
         .footer {
             position: relative;
             padding: 0 0 30px 0;
@@ -1038,83 +1258,108 @@ ul {
             color: black;
         }
 
-        .faq{
-            min-height: 70vh;
+        .faq {
+            min-height: 100vh;
             width: 100vw;
             text-align: center;
-            padding: 0 2rem;
-            background: url(../images/faq.jpg);
+            display: grid;
+            place-items: center;
+            grid-template-columns: repeat(auto-fit, min(100%, 100%));
+            background: url(../images/faq_img.jpg);
             background-repeat: no-repeat;
             background-size: cover;
-        }
-        
-        .faq .row{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0 2rem;
-        }
-        
-        .faq .row .accordion-container{
-            width: 50%;
-            text-align: left;
-        }
-
-        .faq .row .accordion{
-            margin-left: 1rem;
-            margin-right: 2rem;
-        }
-        
-        .faq .row .accordion-container .accordion .accordion-header{
-            background-color: #00bfff;
-            margin: 1rem 0;
-            box-shadow: .1rem .1rem .3rem rgba(0,0,0,.3);
-            cursor: pointer;
-            margin-left: 1rem;
-            margin-right: 2rem;
-        }
-        
-        .faq .row .accordion-container .accordion .accordion-header span{
-            display: inline-block;
-            text-align: center;
-            height: 4rem;
-            width: 5rem;
-            line-height: 4rem;
-            font-size: 2rem;
-            background: #333;
+          }
+          
+          .tab input {
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+          }
+          
+          .tab__content {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.35s;
+          }
+          
+          .tab input:checked ~ .tab__content {
+            max-height: 10rem;
+          }
+          
+          .accordion {
             color: #fff;
-            clip-path: polygon(0% 0%,75% 0%,100% 50%,75% 100%,0% 100%); 
-        }
-        
-        .faq .row .accordion-container .accordion .accordion-header h3{
-            display: inline;
-            color: #333;
-            font-weight: 400;
-            padding-left: .5rem;
-            font-size: 1.5rem;
-        }
-        
-        .faq .row .accordion-container .accordion .accordion-body{
+            border-radius: 0.5rem;
+            font-size: 17px;
+            width: 50%;
+            overflow: hidden;
+            gap: 1rem;
+            margin: 0;
             padding: 1rem;
-            color: #444;
-            box-shadow: .1rem .1rem .3rem rgba(0,0,0,.3);
-            background-color: #fff;
-            font-size: 1.3rem;
-            display: none;
-            margin-left: 1rem;
-            margin-right: 2rem;
-        }
-        
-@media (max-width: 1200px){
-    .faq{
-        min-height: 70vh;
-    }
-}        
-
-@media (max-width: 1000px){
-    html{
-        font-size: 50%;
-    }
+            background-color: #002e5f;
+          }
+          
+          .tab__label,
+          .tab__close {
+            display: flex;
+            color: white;
+            background: #002e5f;
+            cursor: pointer;
+          }
+          
+          .tab__label {
+            justify-content: space-between;
+            padding: 1rem;
+          }
+          
+          .tab__label::after {
+            content: "\276F";
+            width: 1em;
+            height: 1em;
+            text-align: center;
+            transform: rotate(90deg);
+            transition: all 0.35s;
+          }
+          
+          .tab input:checked + .tab__label::after {
+            transform: rotate(270deg);
+          }
+          
+          .tab__content p {
+            margin: 0;
+            font-size: 1.5rem;
+            padding: 1rem;
+          }
+          
+          .tab__close {
+            justify-content: flex-end;
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+          }
+          
+          .tab input:not(:checked) + .tab__label:hover::after {
+            animation: bounce .5s infinite;
+          }
+          @keyframes bounce {
+            25% {
+              transform: rotate(90deg) translate(.25rem);
+            }
+            75% {
+              transform: rotate(90deg) translate(-.25rem);
+            }
+          }
+          
+          
+          @media (max-width: 1200px) {
+            .faq {
+              min-height: 70vh;
+            }
+          }
+          
+          @media (max-width: 1000px) {
+            html {
+              font-size: 50%;
+            }
+          
 
     .header .logo img{
         width: 20%;

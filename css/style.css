@@ -1390,3 +1390,21 @@ ul {
             width: 100%;
         }
 }
+
+.madeBy {
+    text-align: center;
+    padding: 20px;
+    color: #fff; 
+}
+
+.madeBy a {
+    color: #fff; 
+    margin: 0 5px; 
+}
+
+
+.madeBy a:hover {
+    text-decoration: underline;
+}
+
+

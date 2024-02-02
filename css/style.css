@@ -221,7 +221,7 @@ body {
 .section-head h1,
 .testimonials .section-header h2,
 .section-head-1 h4 {
-  margin: 7rem;
+  margin: 4rem;
   padding-top: 6rem;
   display: inline-block;
   font-size: 3.5rem;
@@ -957,13 +957,13 @@ ul {
 }
 
 .team .row .card::before {
-  background: #00769e;
+  background: rgb(0, 21, 44);
   top: -3rem;
   right: -4rem;
 }
 
 .team .row .card::after {
-  background: #be6009;
+  background: rgb(0, 21, 44);
   bottom: -3rem;
   left: -4rem;
 }
@@ -1131,22 +1131,22 @@ ul {
   }
 }
 
-.footer {
-  position: relative;
-  /* padding: 0 0 30px 0; */
-  background: #333;
-}
+/* .footer {
+            position: relative;
+            padding: 0 0 30px 0;
+            background: #251d1d00;
+        } */
 
 .footer .footer-top {
   background: #001e3e;
-  padding: 30px 0 0 0;
+  padding: 60px 0 30px 0;
 }
 
 .footer .footer-top .footer-info,
 .footer .footer-top .footer-links,
 .footer .footer-top .footer-contact,
 .footer .footer-top .footer-newsletter {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .footer .footer-top .social-links a {
@@ -1193,13 +1193,6 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.footer-links p {
-  color: #fff;
-  font-size: 1.5rem;
-  margin-top: 5px;
-  line-height: 26px;
 }
 
 .footer .footer-top .footer-links ul i {
@@ -1303,7 +1296,6 @@ ul {
   color: black;
 }
 
-/* FAQ */
 .faq {
   min-height: 100vh;
   width: 100vw;
@@ -1311,7 +1303,7 @@ ul {
   display: grid;
   place-items: center;
   grid-template-columns: repeat(auto-fit, min(100%, 100%));
-  background: url(../images/faq_img.jpg);
+  background: url(../images/faq_img1.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1347,7 +1339,7 @@ ul {
 .tab__label,
 .tab__close {
   display: flex;
-  color: white;
+  color: rgb(255, 255, 255);
   background: #001730;
   cursor: pointer;
 }

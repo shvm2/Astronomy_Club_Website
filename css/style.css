@@ -826,6 +826,7 @@ body {
   min-width: 100vw;
   text-align: center;
   align-items: center;
+  margin-top: 0 !important ;
 }
 
 .team .heading {
@@ -1297,13 +1298,13 @@ ul {
 }
 
 .faq {
-  min-height: 100vh;
+  min-height: 70vh;
   width: 100vw;
   text-align: center;
   display: grid;
   place-items: center;
   grid-template-columns: repeat(auto-fit, min(100%, 100%));
-  background: url(../images/faq_img1.png);
+  /* background: url(../images/faq_img1.png); */
   background-repeat: no-repeat;
   background-size: cover;
 }

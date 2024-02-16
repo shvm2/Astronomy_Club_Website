@@ -1677,3 +1677,12 @@ ul {
 .madeBy a:hover {
   text-decoration: underline;
 }
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0032; 
+}
+::-webkit-scrollbar-thumb {
+  background: #ce6400; 
+}
